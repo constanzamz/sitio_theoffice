@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
 
@@ -30,28 +30,50 @@
                 <li><a href="contacto.html"><strong>CONTACTO</strong></a></li>
             </ul>
         </nav>
-
-
-       
     </header>
     </div>
     <section>
         <article class="principal">
-            <div class="image-container">
-                <img src="images/ftohome11.jpg" alt="FOTO DE HOME">
+            <!-- Solo imagen de fondo, sin contenido textual -->
+            <div class="fondo">
+                 <!--imagen de background principal-->
             </div>
+            
+            <h1 class="scroll-appear">Revive los Momentos Más Icónicos:<br>
+                Explora el mundo de The Office (USA)</h1>
+        
         </article>
-       
 
+        <div class="scroll-appear">
+        <article class="article-comun secundario">
+            <div class="contenido_secundario">
+            <div class="img">
+                <img src="images/ftoart2.jpg" alt="">  
+            </div>
+            <div class="par1">
+                <h2 class="titulo_secundario">The Office (USA)</h2>
+                <h3>Serie</h3>
+                <p class="parrafo_secundario">
+                    <strong>Género:</strong> Sitcom - Humor negro - Humor absurdo - Falso documental.
+                    <strong>Creador:</strong> Greg Daniels (adaptación estadounidense de la serie original 
+                    británica creada por Ricky Gervais y Stephen Merchant).
+                    <strong><br>Escritor Principal:</strong> Greg Daniels, junto con otros guionistas como Mindy 
+                    Kaling y B.J. Novak. 
+                    <strong><br>Directores:</strong> Greg Daniels, Paul Feig, Ken Kwapis, Randall Einhorn, Jeffrey 
+                    Blitz, Harold Ramis, J.J. Abrams, Mindy Kaling, Steve Carell, John Krasinski.
+                </p>
+            </div>
+        </div>
+        </article>
 
-        <article class="secundario">
-            <div>
-               
+        <article class="article-comun tercero">
+            <div class="contenido_secundario">
+            <div class="img">
                 <img src="images/artftohome.jpg" alt="">  
             </div>
             <div class="par1">
-                <h2><strong>Sinopsis</strong></h2>
-                <p>
+                <h2 class="titulo_secundario">Sinopsis</h2>
+                <p class="parrafo_secundario">
                     The Office es una comedia ambientada en una sucursal 
                     de la empresa Dunder Mifflin, dedicada a la venta de 
                     papel en Scranton, Pennsylvania. A través del estilo 
@@ -64,9 +86,9 @@
                     el eje central de esta aclamada serie.
                 </p>
             </div>
-           
+        </div>
         </article>
-
+    </div>
         
     </section>
     <footer>
@@ -76,5 +98,26 @@
         <img src="images/redes/instagram.png" alt="Instagram">
     </footer>
    
+
+
+    <script>
+        const elements = document.querySelectorAll('.scroll-appear');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        elements.forEach(el => observer.observe(el));
+    </script>
+
+
+
+
+
 </body>
 </html>

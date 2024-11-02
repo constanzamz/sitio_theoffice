@@ -1,13 +1,28 @@
+/*Reset y Configuración Global*/
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-}
 
+a {
+   
+        text-decoration: none; /* Elimina el subrayado por defecto */
+        color: rgb(0, 0, 0); /* Color del enlace */
+        transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+    
+a:hover {
+        transform: scale(1.1); /* Aumenta el tamaño al 110% */
+        color: rgb(115, 115, 115); /* Cambia el color al pasar el mouse */
+    }
+
+
+
+
+/*Estructura de la Página y Secciones*/
 .header-wrapper {
     height: 100px; 
     width: 100%;
@@ -26,7 +41,7 @@ header {
     align-items: center;
     z-index: 1000;
 }
-
+/* Menú de Navegación */
 .menu {
     padding: 0;
     display: flex;
@@ -51,96 +66,121 @@ nav ul li a {
     letter-spacing: 0.05em;
 }
 
-a {
-    text-decoration: none;
-    color: #000000;
-}
+/* Logo */
 
 .logo {
     margin-left: 15px;
 }
 
-
-
-
+/*Secciones de Contenido*/
+/*Seccion*/
 section {
     width: 100%; 
     margin: 0; 
     padding: 0; 
 }
+/* Sección Principal */
 
-.principal {
-    width: 100%; 
-    height: 650px; 
-    margin-top: 10px; 
-	position: relative;
+
+.principal .fondo {
+    background-image: url('../images/ftohome11.jpg'); /* Ruta a la imagen */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 650px; /* Ajusta según tu diseño */
+   position: relative;
+    
 }
 
-.image-container {
-    width: 100%; 
+
+.principal h1 {
+    text-align: center;
+    margin: 20px 0; /* Ajusta el margen */
+    font-size: 2.3rem; /* Tamaño del texto */
+    color: #040404;
+    line-height: 1.2;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400; 
+    margin-top: 120px;
+    margin-bottom: 120px;
 }
 
+.scroll-appear{
+    opacity: 0;
+    transform: translateY(20px); /* Aparece desde abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 
-
-
-
-
-.image-container img {
-    width: 100%; 
-    height: auto; 
-    display: block; 
 }
+
+/*Sección secundaria*/
+.article-comun{
+    display: flex;
+    padding-top: 85px;
+    padding-bottom: 85px;
+    padding-right: 20px;
+
+   
+}
+.scroll-appear.active {
+    opacity: 1;
+    transform: translateY(0); /* Llega a su posición final */
+  }
 
 .secundario {
 	
-		display: flex;
-		align-items: flex-start;
-		margin-top: 5%;
-		padding-left: 180px; 
-		padding-top: 115px;
-		padding-bottom: 190px;
-	
+        background-color: #f6f6f4; /* Fondo que quieras usar */
+        
 }
 
-.secundario img {
+.contenido_secundario{
+
+    display: flex;              /* Mantiene la imagen y el texto en una fila */
+    align-items: center;  /* Alinea verticalmente en el centro */
+    margin-left: 120px;
+        
+    
+}
+.article-comun img {
     width: auto;
     height: auto;
     object-fit: cover;
-    margin-right: 50px;
+    margin-right: 100px;
 	border-radius: 20px;
 }
 
-.secundario .par1 {
-    max-width: 45%; 
+.article-comun .par1 {
+    max-width: 520px; 
     display: flex;
     flex-direction: column;
 	margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
 }
 
-.secundario h2 {
-    font-size: 2rem; 
-    margin-bottom: 20px; 
-}
-
-.secundario p {
-    font-size: 1rem;
-}
-.par1{
-	font-family: 'Open Sans', sans-serif;
-}
-.par1 h2 {
-    font-size: 60px; 
-    margin-bottom: 15px;
-	
-}
-
-.par1 p {
-    font-size: 1.1rem; 
-    line-height: 1.6; 
-	
-}
+.par1 .titulo_secundario  {
+    font-size: 2.3rem; 
+    margin-bottom: 5px; 
+    font-weight: 400;
 
 
+}
+.par1 .parrafo_secundario {
+    font-size: 1rem; 
+    line-height: 1.4; 
+    font-weight: 400;
+    
+}
+
+.secundario h3{
+
+    font-size:1.5rem ;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+
+/* Título en la Sección de Contacto */
 
 .contacto_img{
 
@@ -153,12 +193,11 @@ section {
 		font-size: 4rem;
 		padding: 10px; 
 		border-radius: 5px; 
-		font-family: 'Open Sans', sans-serif;
 		letter-spacing: 10px; 
 
 }
 
-
+/*Formulario de Contacto*/
 
 input[type="text"],
 input[type="email"],
@@ -196,7 +235,7 @@ button:hover {
 }
 
 
-
+/* Contenedor de Formulario */
 
 
 .form-container {
@@ -229,7 +268,7 @@ form {
 }
 
 
-
+/*Pie de Página*/
 
 footer {
     display: flex;
@@ -237,7 +276,7 @@ footer {
     align-items: center;
     height: 200px;
 	
-		background-color: #e4e4e1; 
+		background-color: #f6f6f4; 
 		color: #fff; 
 		padding: 20px;
 		text-align: center;
