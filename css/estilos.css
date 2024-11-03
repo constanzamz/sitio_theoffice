@@ -81,19 +81,51 @@ section {
 }
 /* Sección Principal */
 
-
-.principal .fondo {
-    background-image: url('../images/ftohome11.jpg'); /* Ruta a la imagen */
+.imagen_fondo {
+    
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 650px; /* Ajusta según tu diseño */
-   position: relative;
+    position: relative;
     
 }
 
+.img_index{
 
-.principal h1 {
+    background-image: url('../images/ftohome11.jpg'); /* Ruta a la imagen */
+
+}
+
+.img_temp{
+
+    background-image: url('../images/foto_reparto.jpg'); /* Ruta a la imagen */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px; /* Ajusta según tu diseño */
+    position: relative;
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.fondo_contacto{
+    background-color: #cdcdcd;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px; /* Ajusta según tu diseño */
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    position: relative; /* Mantiene el contexto de posicionamiento */
+}
+
+
+
+
+h1 {
     text-align: center;
     margin: 20px 0; /* Ajusta el margen */
     font-size: 2.3rem; /* Tamaño del texto */
@@ -103,6 +135,7 @@ section {
     font-weight: 400; 
     margin-top: 120px;
     margin-bottom: 120px;
+
 }
 
 .scroll-appear{
@@ -113,20 +146,8 @@ section {
 }
 
 /*Sección secundaria*/
-.article-comun{
-    display: flex;
-    padding-top: 85px;
-    padding-bottom: 85px;
-    padding-right: 20px;
 
-   
-}
-.scroll-appear.active {
-    opacity: 1;
-    transform: translateY(0); /* Llega a su posición final */
-  }
-
-.secundario {
+.color_fondo {
 	
         background-color: #f6f6f4; /* Fondo que quieras usar */
         
@@ -137,10 +158,12 @@ section {
     display: flex;              /* Mantiene la imagen y el texto en una fila */
     align-items: center;  /* Alinea verticalmente en el centro */
     margin-left: 120px;
-        
+    padding-top: 85px;
+    padding-bottom: 85px;
+    padding-right: 20px;    
     
 }
-.article-comun img {
+img {
     width: auto;
     height: auto;
     object-fit: cover;
@@ -148,7 +171,7 @@ section {
 	border-radius: 20px;
 }
 
-.article-comun .par1 {
+.par1 {
     max-width: 520px; 
     display: flex;
     flex-direction: column;
@@ -170,7 +193,7 @@ section {
     
 }
 
-.secundario h3{
+h3{
 
     font-size:1.5rem ;
     font-family: 'Raleway', sans-serif;
@@ -182,19 +205,25 @@ section {
 
 /* Título en la Sección de Contacto */
 
-.contacto_img{
-
+.titulo_grande{
 	
-		position: absolute; 
-		top: 185px; 
-		left: 50%; 
-		transform: translateX(-50%); 
-		color: rgb(0, 0, 0); 
-		font-size: 4rem;
-		padding: 10px; 
-		border-radius: 5px; 
-		letter-spacing: 10px; 
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    letter-spacing: 10px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center; /* Alinea el texto al centro */
+    margin: 0; /* Elimina el margen por defecto */
+        
 
+}
+.tit_temp{
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    letter-spacing: 10px;
+    font-family: 'Raleway', sans-serif;
+    justify-content: center; 
+    margin-left: -425px;
+    
 }
 
 /*Formulario de Contacto*/
@@ -208,14 +237,14 @@ textarea {
     border: 1px solid #ccc; 
     border-radius: 5px; 
     font-size: 16px; 
-    font-family: 'Open Sans', sans-serif; 
+    font-family: 'Raleway', sans-serif;
     transition: border-color 0.3s; 
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #007BFF; 
+    border-color: #2b2c2d; 
     outline: none; 
 }
 
@@ -240,12 +269,12 @@ button:hover {
 
 .form-container {
     display: flex; 
-    justify-content: flex-start; 
     align-items: center; 
-    margin: 40px 0 210px; 
-    padding: 0 150px; 
+    margin-top: 100px;
+    margin-bottom: 100px;
+    justify-content: center;
     box-sizing: border-box; 
-    width: calc(100% - 80px); 
+    
 }
 
 form {
@@ -253,18 +282,15 @@ form {
     max-width: 600px; 
     margin: 0 20px 0 0; 
     padding: 20px; 
-    background-color: #ffffff; 
+    background-color: #f6f6f4f3; 
     border-radius: 10px; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
 }
 
-.ftoformulario {
-    margin-left: 20px; 
-}
-
-.ftoformulario img {
-    max-width: 150px; 
-    height: auto; 
+.ftoformulario img{
+    max-width: 300px; 
+    height: auto;
+    margin-left: 20px;  
 }
 
 
@@ -292,8 +318,36 @@ footer img {
 	margin-right: 15px;
 }
 
+.sorpresa {
+
+    display: flex; 
+    align-items: center; 
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 60px;
+    justify-content: center;
+
+
+}
+
+.scroll-appear.active {
+    opacity: 1;
+    transform: translateY(0); /* Llega a su posición final */
+  }
+
+.comentario{
+
+    font-family: 'Raleway' , sans-serif;
+    padding: 10px;
+    font-weight: 350;
+    margin-left: -10px;
+    font-size: 20px;
+}
+
+.reparto{
 
 
 
 
 
+}

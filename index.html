@@ -33,10 +33,10 @@
     </header>
     </div>
     <section>
-        <article class="principal">
-            <!-- Solo imagen de fondo, sin contenido textual -->
-            <div class="fondo">
-                 <!--imagen de background principal-->
+        <article>
+            
+            <div class="imagen_fondo img_index scroll-appear">
+                 
             </div>
             
             <h1 class="scroll-appear">Revive los Momentos Más Icónicos:<br>
@@ -45,7 +45,9 @@
         </article>
 
         <div class="scroll-appear">
-        <article class="article-comun secundario">
+
+        <article class=" color_fondo">
+
             <div class="contenido_secundario">
             <div class="img">
                 <img src="images/ftoart2.jpg" alt="">  
@@ -66,7 +68,7 @@
         </div>
         </article>
 
-        <article class="article-comun tercero">
+        <article>
             <div class="contenido_secundario">
             <div class="img">
                 <img src="images/artftohome.jpg" alt="">  
@@ -100,20 +102,7 @@
    
 
 
-    <script>
-        const elements = document.querySelectorAll('.scroll-appear');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        elements.forEach(el => observer.observe(el));
-    </script>
+    <script src="js/script.js"></script>
 
 
 
