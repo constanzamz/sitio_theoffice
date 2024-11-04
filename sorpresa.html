@@ -11,7 +11,7 @@
 
 
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Sitio The office</title>
+    <title>Sorpresa</title>
 </head>
 <body>
     <div class="header-wrapper">
@@ -21,11 +21,37 @@
             <img src="images/logo1.jpg" alt="Logo the office">
         </a>
         </div>
-        <nav  class="menu">
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav  class="menu" id="menu">
             <ul>
                 <li><a href="index.html"><strong>HOME</strong></a></li>
-                <li><a href="temporadas.html"><strong>TEMPORADAS</strong></a></li>
-                <li><a href="reparto.html"><strong>REPARTO</strong></a></li>
+                <li><a href="temporadas.html"><strong>TEMPORADAS</strong></a>
+                    <ul class="submenu">
+                        <li><a href="temporadas.html#temporada1"><strong>Temporada 1</strong></a></li>
+                        <li><a href="temporadas.html#temporada2"><strong>Temporada 2</strong></a></li>
+                        <li><a href="temporadas.html#temporada3"><strong>Temporada 3</strong></a></li>
+                        <li><a href="temporadas.html#temporada4"><strong>Temporada 4</strong></a></li>
+                        <li><a href="temporadas.html#temporada5"><strong>Temporada 5</strong></a></li>
+                        <li><a href="temporadas.html#temporada6"><strong>Temporada 6</strong></a></li>
+                        <li><a href="temporadas.html#temporada7"><strong>Temporada 7</strong></a></li>
+                        <li><a href="temporadas.html#temporada8"><strong>Temporada 8</strong></a></li>
+                        <li><a href="temporadas.html#temporada9"><strong>Temporada 9</strong></a></li>
+                    </ul>
+                
+                </li>
+                <li><a href="reparto.html"><strong>REPARTO</strong></a>
+                    <ul class="submenu">
+                        <li><a href="reparto.html#michael"><strong>Michael</strong></a></li>
+                        <li><a href="reparto.html#dwight"><strong>Dwight</strong></a></li>
+                        <li><a href="reparto.html#jim"><strong>Jim</strong></a></li>
+                        <li><a href="reparto.html#pam"><strong>Pam</strong></a></li>
+                    </ul>
+                
+                </li>
                 <li><a href="galeria.html"><strong>GALERÍA</strong></a></li>
                 <li><a href="contacto.html"><strong>CONTACTO</strong></a></li>
             </ul>
@@ -36,7 +62,7 @@
     </header>
     </div>
 
-    <article class="sorpresa"> 
+    <article class="sorpresa" > 
         <img src="images/muchainfo.jpg" alt="Facebook">
     </article>
 
@@ -46,10 +72,17 @@
 
     
     <footer>
+        <div class="img">
         <img src="images/redes/facebook.png" alt="Facebook">
         <img src="images/redes/twitter.png" alt="Twitter">
         <img src="images/redes/youtube.png" alt="Youtube">
         <img src="images/redes/instagram.png" alt="Instagram">
+
+        </div>
+        <div class="legales">
+        <p>&copy; 2024 Sitio The Office. Todos los derechos reservados.</p>
+        <p>Términos y condiciones | Política de privacidad</p>
+        </div>
     </footer>
    
 </body>
